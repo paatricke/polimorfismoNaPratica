@@ -7,8 +7,10 @@ public class ClienteTest {
 		ClienteNormal cn = new ClienteNormal("Julian Casablancas");
 		ClientePremium cp = new ClientePremium("Alex Turner");
 		
-		System.out.println("Ambos fazem compras de $300");
-		cn.calculaDesconto(300);
-		cp.calculaDesconto(300);
+		Compra compra = new Compra();
+		
+		compra.realizaCompra(cn, 300);
+		compra.realizaCompra(cp, 300);
+		
 	}
 }
